@@ -1,0 +1,283 @@
+
+body {
+    width: 100%; 
+    margin: 0 auto; /* Center the content on larger screens */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+header {
+    display: flex;               /* Enables flexbox layout */
+    justify-content: flex-end; /* Optional: Distributes space between logo and nav */
+    padding: 10px;               /* Adds padding inside the header */
+    width: 100vw;                /* Ensures header spans full viewport width */
+    box-sizing: border-box;      /* Includes padding and border in the element's total width */
+    margin: 0;                   /* Removes default margin */
+    border-bottom: 3px solid #000
+   
+    
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;            /* Removes the default list styling */
+    margin: 0;                   /* Removes default margin */
+    padding: 0;                  /* Removes default padding */
+}
+
+nav ul li {
+    margin-left: 20px;           /* Adds spacing between the list items */
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 48px;
+    font-weight:100;
+    line-height: 1;
+    
+}
+
+h2 {
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 96px;
+    line-height: 1;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 96px;
+    font-weight:100;
+    line-height: 1;
+    
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 96px;
+    font-weight:600;
+    
+}
+
+h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 64px;
+    font-weight:501;
+    text-align: right;
+    
+}
+
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight 501; 
+}
+
+h7 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+
+.spacing {
+    line-height: 0.1;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.spacing h1, h2, h3 {
+    margin: 0;
+    padding-top: 20px;
+
+    
+}
+
+.flex-headings {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 30px;
+    gap: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; /* Aligns items to the right */
+    align-items: center; /* Aligns items to the bottom */
+}
+
+.footer-bottom img {
+    width: 85px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+}
+
+.footer-bottom h6 {
+    margin: 0;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+* {
+    box-sizing: inherit; /* Inherits the box-sizing property */
+    
+  }
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100vw;
+    margin: 0; /* Ensures no margin around the flex container */
+    padding: 0;
+}
+
+.myWorkRow {
+    display: flex;
+    justify-content: space-between; /* Places text at opposite ends */
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    border-width: 3px 0px 0px 0px ;
+    border-color: #ccc;  
+    border-style: solid;                   
+    flex: 1;
+    gap: 20px;
+    
+}
+.myWorkRow:last-child {
+    border-bottom: 3px;
+    border-color: #ccc;  
+    border-style: solid;  
+}
+
+.skillGrid img {
+    width: 25%;
+}
+
+.skillGrid {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    min-height: 700px;
+    grid-template-areas:
+    "gridAreaA gridAreaB"
+    "gridAreaC gridAreaC"; 
+    background-color: blue;
+    margin-top: auto;
+}
+
+.gridAreaA {
+    grid-area: gridAreaA;
+    text-align: center;
+    margin-top: 70px;
+
+}
+
+.gridAreaB {
+    grid-area: gridAreaB;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.gridAreaC {
+    grid-area: gridAreaC;
+    background-color: aquamarine;
+    text-align: center;
+    margin-bottom: auto;
+    min-height: 500px;
+   
+    
+}
+
+.gridAreaC img {
+    display: inline-block;
+}
+
+.mySkills {
+    padding: 100px 0;
+}
+
+.half {
+    width: 50%;
+    
+    
+    
+}
+
+.half h1{
+    text-wrap: wrap;
+    word-wrap: break-word;
+    
+    
+    
+}
+.half h7 {
+    text-align: right;
+    float: right;
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .flexContainer { 
+        flex-direction: column;
+    
+    }
+
+    .skillGrid {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: 300px;
+        grid-template-areas:
+        "gridAreaA" 
+        "gridAreaB"
+        "gridAreaC"; 
+        background-color: blue;
+        margin-top: auto;
+        
+    }
+    * {
+        background-color: blue;
+    }
+
+    .spacing {
+        
+    }
+
+    .myWorkRow h1, h7 {
+        width: 100%;
+        flex-wrap: wrap;
+        
+        
+    }
+
+    .myWorkRow {
+        flex-direction: column;
+    }
+
+ 
+}
